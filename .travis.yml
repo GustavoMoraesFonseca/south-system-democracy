@@ -1,0 +1,16 @@
+language: bash
+services: docker
+before_install:
+  - echo "Iniciando CI"
+script:
+  - docker build -t gustavomoraesfonseca/south-system-test:1.0 .
+before_deploy:
+  - echo "${DOCKER_PASSWORD}" | docker login --username "${DOCKER_USERNAME}" --password-stdin
+deploy:
+  provider: script
+  script:
+    docker push gustavomoraesfonseca/south-system-test:1.0;
+  on:
+    branch: develop
+notifications:
+  email: true
