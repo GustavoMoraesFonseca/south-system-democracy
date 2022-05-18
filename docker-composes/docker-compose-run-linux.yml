@@ -21,9 +21,9 @@ services:
       - 9091:9091
     environment:
       BOOSTRAP_SERVER: broker:9092
-      MYSQL_IP: mysql
-      MYSQL_USER: backend-service
-      MYSQL_PASSWORD: Back@Service
+      MYSQL_IP: ${DB_IP}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_USER_PASSWORD}
     links:
       - mysql
     depends_on:

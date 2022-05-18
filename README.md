@@ -59,13 +59,13 @@ Dependências Externas
 
 > LINUX
 
-> * $curl --silent --output docker-compose-run-linux.yml https://raw.githubusercontent.com/GustavoMoraesFonseca/south-system-democracy/develop/docker-compose-run-linux.yml
+> * $curl --silent --output docker-compose-run-linux.yml https://raw.githubusercontent.com/GustavoMoraesFonseca/south-system-democracy/develop/docker-composes/docker-compose-run-linux.yml
 
 > * $docker-compose -f docker-compose-run-linux.yml up -d
 
 > ou WINDOWS
 
-> * $curl --silent --output docker-compose-run-linux.yml https://raw.githubusercontent.com/GustavoMoraesFonseca/south-system-democracy/develop/docker-compose-run-windows.yml
+> * $curl --silent --output docker-compose-run-linux.yml https://raw.githubusercontent.com/GustavoMoraesFonseca/south-system-democracy/develop/docker-composes/docker-compose-run-windows.yml
 
 > * $docker-compose -f docker-compose-run-windows.yml up -d
 
