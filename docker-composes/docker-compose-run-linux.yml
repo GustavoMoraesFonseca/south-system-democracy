@@ -10,7 +10,7 @@ services:
       MYSQL_USER: ${DB_ADMIN}
       MYSQL_ROOT_PASSWORD: ${DB_ADMIN_PASSWORD}
     volumes:
-      - C:\Diversos\mysql:/var/lib/mysql
+      - /usr/mysql:/var/lib/mysql
     networks:
       - southsystem
 
@@ -22,8 +22,8 @@ services:
     environment:
       BOOSTRAP_SERVER: broker:9092
       MYSQL_IP: mysql
-      MYSQL_USER: ${DB_USER}
-      MYSQL_PASSWORD: ${DB_USER_PASSWORD}
+      MYSQL_USER: backend-service
+      MYSQL_PASSWORD: Back@Service
     links:
       - mysql
     depends_on:
